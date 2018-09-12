@@ -58,7 +58,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About page heee',
-        //currentYear: new Date().getFullYear() --moved
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects new page!!',
     });
 });
 
@@ -71,3 +76,7 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
     console.log(`server is up on port ${port}`);
 }); 
+
+// app.listen(3000, () => {
+//     console.log(`server is up on port 3000`);
+// }); 
